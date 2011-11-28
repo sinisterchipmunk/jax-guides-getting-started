@@ -5,5 +5,7 @@ Jax.Controller.create "Dungeon", ApplicationController,
     @world.addObject dungeon
     @player.camera.setPosition  dungeon.starting.position
     @player.camera.setDirection dungeon.starting.direction
- 
+    @player.lantern = LightSource.find "lantern"
+    @world.addLightSource @player.lantern
+     
   helpers: -> [ UserInputHelper ]

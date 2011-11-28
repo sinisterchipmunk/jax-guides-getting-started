@@ -28,3 +28,7 @@ Jax.getGlobal().UserInputHelper = Jax.Helper.create
  
     @player.camera.move (movement.forward + movement.backward) * speed
     @player.camera.strafe (movement.left + movement.right) * speed
+    
+    if @player.lantern
+      # reposition the lantern to the player's location
+      @player.lantern.camera.setPosition @player.camera.getPosition()
