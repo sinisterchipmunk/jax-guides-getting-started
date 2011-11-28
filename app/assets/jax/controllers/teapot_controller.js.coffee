@@ -1,11 +1,6 @@
 Jax.Controller.create "Teapot", ApplicationController,
   index: ->
-    teapot = new Jax.Model
-      position: [0, 0, -5]
-      mesh: new Jax.Mesh.Teapot
-        material: "teapot"
-
-    @world.addObject teapot
+    @world.addObject Teapot.find "actual"
     @world.addLightSource "sun"
     @world.addLightSource "candle"
     @world.addLightSource "searchlight"
