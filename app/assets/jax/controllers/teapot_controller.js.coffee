@@ -6,3 +6,6 @@ Jax.Controller.create "Teapot", ApplicationController,
     @world.addLightSource "searchlight"
       
   helpers: -> [ UserInputHelper ]
+
+  mouse_clicked: (event) ->
+    @context.redirectTo "dungeon/index"
