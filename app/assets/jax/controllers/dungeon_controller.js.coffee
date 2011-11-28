@@ -1,7 +1,8 @@
 Jax.Controller.create "Dungeon", ApplicationController,
   index: ->
-    # Action body here
-  
-  # Some special actions are fired whenever the corresponding input is
-  # received from the user.
-  mouse_pressed: (event) ->
+    dungeon = Dungeon.find "first"
+    @world.addObject dungeon
+    @player.camera.setPosition  dungeon.starting.position
+    @player.camera.setDirection dungeon.starting.direction
+ 
+  helpers: -> [ UserInputHelper ]
