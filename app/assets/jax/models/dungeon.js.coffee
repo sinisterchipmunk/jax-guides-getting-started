@@ -3,6 +3,17 @@ parse = (str) ->
   return [ parseFloat(vec[0]), 0.0, parseFloat(vec[1]) ]
  
 Jax.getGlobal()['Dungeon'] = Jax.Model.create
+  addTorches: (world) ->
+    if @map
+      for z in [0...@map.length]
+        row = @map[z]
+        for x in [0...row.length]
+          # each apostrophe (') represents a light source
+          if row[x] == "'"
+            torch = LightSource.find "torch"
+            torch.camera.setPosition x, 0, z
+            world.addLightSource torch
+
   after_initialize: ->
     if @starting
       @starting.position  = parse @starting.position
