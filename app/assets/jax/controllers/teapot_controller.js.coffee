@@ -6,6 +6,7 @@ Jax.Controller.create "Teapot", ApplicationController,
         material: "teapot"
 
     @world.addObject teapot
+    @world.addLightSource "sun"
       
   # Some special actions are fired whenever the corresponding input is
   # received from the user.
