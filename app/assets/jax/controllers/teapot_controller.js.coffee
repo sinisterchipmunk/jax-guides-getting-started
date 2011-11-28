@@ -3,6 +3,7 @@ Jax.Controller.create "Teapot", ApplicationController,
     teapot = new Jax.Model
       position: [0, 0, -5]
       mesh: new Jax.Mesh.Teapot
+        material: "teapot"
 
     @world.addObject teapot
       
