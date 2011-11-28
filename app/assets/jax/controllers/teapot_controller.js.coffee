@@ -5,6 +5,6 @@ Jax.Controller.create "Teapot", ApplicationController,
     @world.addLightSource "candle"
     @world.addLightSource "searchlight"
       
-  # Some special actions are fired whenever the corresponding input is
-  # received from the user.
-  mouse_pressed: (event) ->
+  mouse_dragged: (event) ->
+    @player.camera.pitch 0.01 *  event.diffy
+    @player.camera.yaw   0.01 * -event.diffx
