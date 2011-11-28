@@ -19,7 +19,7 @@ Jax.getGlobal()['Dungeon'] = Jax.Model.create
             x += ofs * side
             #              triangle 1                                  triangle 2
             vertices.push  x,-ofs,z-ofs,  x,-ofs,z+ofs,  x,ofs,z-ofs,  x,ofs,z-ofs,  x,-ofs,z+ofs,  x,ofs,z+ofs
-            colors.push    1,0,0,1,       1,0,0,1,       1,0,0,1,      1,0,0,1,      1,0,0,1,       1,0,0,1
+            colors.push    1,1,1,1,       1,1,1,1,       1,1,1,1,      1,1,1,1,      1,1,1,1,       1,1,1,1
             texcoords.push 0,0,           1,0,           0,1,          0,1,          1,0,           1,1
             normals.push   -side,0,0,     -side,0,0,     -side,0,0,    -side,0,0,    -side,0,0,     -side,0,0
 
@@ -27,7 +27,7 @@ Jax.getGlobal()['Dungeon'] = Jax.Model.create
             z -= ofs*side
             #              triangle 1                                  triangle 2
             vertices.push  x-ofs,-ofs,z,  x+ofs,-ofs,z,  x-ofs,ofs,z,  x-ofs,ofs,z,  x+ofs,-ofs,z,  x+ofs,ofs,z
-            colors.push    0,0,1,1,       0,0,1,1,       0,0,1,1,      0,0,1,1,      0,0,1,1,       0,0,1,1
+            colors.push    1,1,1,1,       1,1,1,1,       1,1,1,1,      1,1,1,1,      1,1,1,1,       1,1,1,1
             texcoords.push 0,0,           1,0,           0,1,          0,1,          1,0,           1,1
             normals.push   0,0,side,      0,0,side,      0,0,side,     0,0,side,     0,0,side,      0,0,side
 
@@ -52,6 +52,6 @@ Jax.getGlobal()['Dungeon'] = Jax.Model.create
                 # ceiling
                 vertices.push  x-0.5,0.5,y+0.5,  x-0.5,0.5,y-0.5,  x+0.5,0.5,y-0.5        # tri 1
                 vertices.push  x-0.5,0.5,y+0.5,  x+0.5,0.5,y-0.5,  x+0.5,0.5,y+0.5        # tri 2
-                colors.push    1,1,0,1,  1,1,0,1,  1,1,0,1,  1,1,0,1,  1,1,0,1,  1,1,0,1
+                colors.push    1,1,1,1,  1,1,1,1,  1,1,1,1,  1,1,1,1,  1,1,1,1,  1,1,1,1
                 texcoords.push 0,1,  0,0,  1,0,  0,1,  1,0,  1,1
                 normals.push   0,-1,0,  0,-1,0,  0,-1,0,  0,-1,0,  0,-1,0,  0,-1,0
